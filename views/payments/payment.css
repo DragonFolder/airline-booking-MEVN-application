@@ -1,0 +1,134 @@
+:root {
+    --primary-blue: #3062ff;
+    --bg-gray: #f0f4f8;
+    --text-dark: #1a2b49;
+    --text-light: #6b778c;
+    --border-color: #dfe1e6;
+    --discount-red: #e54937;
+}
+
+body {
+    background-color: var(--primary-blue); /* Matches top background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-container {
+    max-width: 1100px;
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.main-content {
+    flex: 2;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.sidebar {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+/* Payment Cards */
+.payment-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.payment-card.active {
+    background-color: #f4f7ff;
+    border-color: var(--primary-blue);
+}
+
+.radio-circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--text-light);
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.radio-circle.checked {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.payment-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.discount-text {
+    color: var(--discount-red);
+    font-size: 13px;
+}
+
+.info-alert {
+    background: #f4f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Details */
+.booking-info {
+    padding: 20px;
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: white;
+}
+
+.depart { background: #3062ff; }
+.return { background: #3062ff; }
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.total-row {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pay-button {
+    width: 100%;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+}

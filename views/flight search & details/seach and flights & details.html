@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprint Airlines</title>
+  <link rel="stylesheet" href="search and flights & details.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- =============================================
+       PAGE 1 — FLIGHT SEARCH
+  ============================================== -->
+  <div id="page-search" class="page active">
+
+    <header class="navbar">
+      <div class="navbar-left">
+        <button class="btn-icon" aria-label="Back">&#8592;</button>
+        <div class="brand">
+          <span class="brand-icon">&#9776;</span>
+          <span class="brand-name">SPRINT AIRLINES</span>
+        </div>
+      </div>
+      <button class="btn-login">Login</button>
+    </header>
+
+    <section class="hero-banner">
+      <div class="featured-badge">Featured Route</div>
+      <p class="hero-title">Spring Flights to London</p>
+    </section>
+
+    <section class="date-selector">
+      <button class="date-card" data-date="OCT 22" data-price="$412">
+        <span class="date-label">OCT 22</span>
+        <span class="date-price">$412</span>
+      </button>
+      <button class="date-card active" data-date="OCT 23" data-price="$385">
+        <span class="date-label">OCT 23</span>
+        <span class="date-price">$385</span>
+        <span class="dot">&#9679;</span>
+      </button>
+      <button class="date-card" data-date="OCT 24" data-price="$445">
+        <span class="date-label">OCT 24</span>
+        <span class="date-price">$445</span>
+      </button>
+      <button class="date-card" data-date="OCT 25" data-price="$390">
+        <span class="date-label">OCT 25</span>
+        <span class="date-price">$390</span>
+      </button>
+      <button class="date-card" data-date="OCT 26" data-price="$420">
+        <span class="date-label">OCT 26</span>
+        <span class="date-price">$420</span>
+      </button>
+    </section>
+
+    <div class="filter-bar">
+      <div class="filter-chips">
+        <span class="chip chip-active">Direct <button class="chip-close" aria-label="Remove Direct filter">&#10005;</button></span>
+        <span class="chip">Price <span class="chip-arrow">&#8964;</span></span>
+      </div>
+      <span class="result-count">72 results found</span>
+    </div>
+
+    <main class="flights-list">
+
+      <article class="flight-card" tabindex="0"
+        data-price="$385"
+        data-flight="JFK → LHR · 10:45 AM – 11:05 PM · Non-stop">
+        <div class="card-header">
+          <div class="airline-info">
+            <span class="airline-icon">&#9776;</span>
+            <span class="airline-name">Sprint Airlines</span>
+          </div>
+          <span class="badge badge-eco">Eco Saver</span>
+        </div>
+        <div class="flight-route">
+          <div class="time-group">
+            <span class="time">10:45 AM</span>
+            <span class="airport">JFK · NYC</span>
+          </div>
+          <div class="route-line">
+            <div class="line-track">
+              <div class="line-fill"></div>
+              <span class="plane-icon">&#9992;</span>
+            </div>
+            <div class="route-meta">
+              <span class="duration">7h 20m</span>
+              <span class="stops nonstop">Non-stop</span>
+            </div>
+          </div>
+          <div class="time-group right">
+            <span class="time">11:05 PM</span>
+            <span class="airport">LHR · LON</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="price-info">
+            <span class="price-label">Total Price</span>
+            <span class="price">$385</span>
+          </div>
+          <button class="btn-select">Select</button>
+        </div>
+      </article>
+
+      <article class="flight-card" tabindex="0"
+        data-price="$412"
+        data-flight="EWR → LHR · 06:15 PM – 08:00 AM · 1 stop (DUB)">
+        <div class="card-header">
+          <div class="airline-info">
+            <span class="airline-icon">&#9776;</span>
+            <span class="airline-name">Sprint Airlines</span>
+          </div>
+          <span class="badge badge-flex">Flexible</span>
+        </div>
+        <div class="flight-route">
+          <div class="time-group">
+            <span class="time">06:15 PM</span>
+            <span class="airport">EWR · NYC</span>
+          </div>
+          <div class="route-line">
+            <div class="line-track">
+              <div class="line-fill"></div>
+              <span class="stop-dot"></span>
+              <span class="plane-icon">&#9992;</span>
+            </div>
+            <div class="route-meta">
+              <span class="duration">8h 45m</span>
+              <span class="stops">1 stop (DUB)</span>
+            </div>
+          </div>
+          <div class="time-group right">
+            <span class="time">08:00 AM</span>
+            <span class="airport">LHR · LON</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="price-info">
+            <span class="price-label">Total Price</span>
+            <span class="price">$412</span>
+          </div>
+          <button class="btn-select">Select</button>
+        </div>
+      </article>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active">
+        <span class="nav-icon">&#128269;</span>
+        <span class="nav-label">SEARCH</span>
+      </button>
+      <button class="nav-item">
+        <span class="nav-icon">&#9992;</span>
+        <span class="nav-label">TRIPS</span>
+      </button>
+      <button class="nav-item">
+        <span class="nav-icon">&#127760;</span>
+        <span class="nav-label">PASSES</span>
+      </button>
+      <button class="nav-item">
+        <span class="nav-icon">&#128100;</span>
+        <span class="nav-label">PROFILE</span>
+      </button>
+    </nav>
+
+  </div><!-- /page-search -->
+
+
+  <!-- =============================================
+       PAGE 2 — SELECT A BUNDLE
+  ============================================== -->
+  <div id="page-bundle" class="page">
+
+    <div class="bundle-wrapper">
+
+      <h1 class="bundle-page-title">Select a bundle for all flights</h1>
+
+      <div class="bundle-outer-card">
+
+        <div class="bundle-tip">
+          <span class="bundle-tip-icon">💡</span>
+          Tip: Avoid airport fees and long lines. Buy your add-ons ahead of time!
+        </div>
+
+        <!-- Selected flight info bar -->
+        <div class="selected-flight-bar">
+          <span class="sfb-label">Selected flight:</span>
+          <span class="sfb-info" id="selected-flight-info">JFK → LHR · 10:45 AM – 11:05 PM</span>
+          <span class="sfb-price" id="selected-flight-price">$385</span>
+        </div>
+
+        <!-- Bundle Cards Grid -->
+        <div class="bundle-grid">
+
+          <!-- GO Basic -->
+          <div class="bundle-card" data-bundle="basic">
+            <div class="bundle-top-bar basic-bar"></div>
+            <div class="bundle-card-inner">
+              <div class="bundle-card-head">
+                <h2 class="bundle-title basic-title">GO Basic</h2>
+                <p class="bundle-subtitle">Buy other add-ons later at regular price</p>
+                <div class="bundle-divider"></div>
+                <p class="bundle-price-note">Included in fare</p>
+              </div>
+              <ul class="bundle-features">
+                <li class="bundle-feature">
+                  <span class="feat-icon">🧳</span>
+                  <div class="feat-text">
+                    <strong>1pc hand-carry bag</strong>
+                    <span>Max. weight of 7kg</span>
+                  </div>
+                </li>
+                <li class="bundle-feature">
+                  <span class="feat-icon">💺</span>
+                  <div class="feat-text">
+                    <strong>Random seat</strong>
+                    <span>Seat assigned upon checking in</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="bundle-card-foot">
+                <a href="#" class="view-fare-link" onclick="return false;">&#128441; View fare rules</a>
+                <button class="btn-bundle basic-btn" data-bundle="basic">I'm okay with fare only</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- GO Easy (Featured) -->
+          <div class="bundle-card featured" data-bundle="easy">
+            <div class="bundle-top-bar easy-bar"></div>
+            <div class="bundle-card-inner">
+              <div class="bundle-card-head">
+                <h2 class="bundle-title easy-title">GO Easy</h2>
+                <p class="bundle-subtitle easy-sub">Get discounts on baggage and seats</p>
+                <div class="bundle-divider easy-divider"></div>
+                <p class="bundle-price-note easy-price-note">+ PHP 2900.00 /guest</p>
+              </div>
+              <ul class="bundle-features">
+                <li class="bundle-feature">
+                  <span class="feat-icon">🧳</span>
+                  <div class="feat-text">
+                    <strong>1pc hand-carry bag</strong>
+                    <span>Max. weight of 7kg</span>
+                  </div>
+                </li>
+                <li class="bundle-feature">
+                  <span class="feat-icon">🔒</span>
+                  <div class="feat-text">
+                    <strong>1pc checked baggage</strong>
+                    <span>Max. weight of 20kg</span>
+                  </div>
+                </li>
+                <li class="bundle-feature">
+                  <span class="feat-icon">💺</span>
+                  <div class="feat-text">
+                    <strong>Preferred seat</strong>
+                    <span>Standard seat of your choice</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="bundle-card-foot">
+                <a href="#" class="view-fare-link easy-fare" onclick="return false;">&#128441; View fare rules</a>
+                <button class="btn-bundle easy-btn" data-bundle="easy">I want cheaper bags &amp; seats</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- GO Flexi (Disabled / Coming Soon) -->
+          <div class="bundle-card disabled" data-bundle="flexi">
+            <div class="bundle-top-bar flexi-bar"></div>
+            <div class="bundle-card-inner">
+              <div class="bundle-card-head">
+                <h2 class="bundle-title flexi-title">GO Flexi</h2>
+                <p class="bundle-subtitle">Enjoy free cancellation when your plans change</p>
+                <div class="bundle-divider"></div>
+                <p class="bundle-price-note flexi-price-note">Coming soon</p>
+              </div>
+              <ul class="bundle-features">
+                <li class="bundle-feature disabled-feat">
+                  <span class="feat-icon">🧳</span>
+                  <div class="feat-text">
+                    <strong>1pc hand-carry bag</strong>
+                    <span>Max. weight of 7kg</span>
+                  </div>
+                </li>
+                <li class="bundle-feature disabled-feat">
+                  <span class="feat-icon">🔒</span>
+                  <div class="feat-text">
+                    <strong>1pc checked baggage</strong>
+                    <span>Max. weight of 20kg</span>
+                  </div>
+                </li>
+                <li class="bundle-feature disabled-feat">
+                  <span class="feat-icon">💺</span>
+                  <div class="feat-text">
+                    <strong>Preferred seat</strong>
+                    <span>Standard seat of your choice</span>
+                  </div>
+                </li>
+                <li class="bundle-feature disabled-feat">
+                  <span class="feat-icon">📅</span>
+                  <div class="feat-text">
+                    <strong>CEB Flexi</strong>
+                    <span>Convert your booking into non-expiring Travel Fund for future use</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="bundle-card-foot">
+                <a href="#" class="view-fare-link flexi-fare" onclick="return false;">&#128441; View fare rules</a>
+                <button class="btn-bundle flexi-btn" disabled>I need flexible travel plans</button>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /bundle-grid -->
+
+        <p class="bundle-note">
+          <strong>Note:</strong> PWD and/or Senior Citizen discounts do not apply for flights with promos or discounts.
+          However, PWDs and senior citizens are still eligible for VAT exemption, in accordance with R.A. 10754 (Base Fare only).
+        </p>
+
+      </div><!-- /bundle-outer-card -->
+
+      <div class="bundle-back-row">
+        <button class="btn-back" id="btn-back-to-search">Back</button>
+      </div>
+
+    </div><!-- /bundle-wrapper -->
+
+  </div><!-- /page-bundle -->
+
+  <script src="search and flights & details.js"></script>
+</body>
+</html>

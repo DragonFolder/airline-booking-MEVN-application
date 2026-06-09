@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Payment Method</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Left Section -->
+        <div class="main-content">
+            <section class="payment-section">
+                <div class="section-header">
+                    <h2>Select a Payment Method</h2>
+                    <p class="timer-text">Please secure your booking within <span id="timer">29:23</span></p>
+                </div>
+
+                <div class="payment-options">
+                    <!-- GCash -->
+                    <div class="payment-card active">
+                        <div class="radio-circle checked">✓</div>
+                        <div class="payment-details">
+                            <span class="payment-name">GCash</span>
+                            <span class="discount-text">Payment discount: - PHP 551.00</span>
+                        </div>
+                        <img src="https://via.placeholder.com/30x20?text=GC" alt="GCash" class="provider-logo">
+                    </div>
+
+                    <div class="info-alert">
+                        <span>ⓘ Prices may vary depending on payment method <a href="#">Show Details</a></span>
+                    </div>
+
+                    <!-- Credit Card -->
+                    <div class="payment-card">
+                        <div class="radio-circle"></div>
+                        <span class="payment-name">New credit/debit card</span>
+                        <div class="card-icons">
+                            <!-- Placeholder for card logos -->
+                            <img src="https://via.placeholder.com/100x20?text=VISA+MC+AMEX" alt="Cards">
+                        </div>
+                    </div>
+
+                    <!-- Google Pay -->
+                    <div class="payment-card">
+                        <div class="radio-circle"></div>
+                        <span class="payment-name">Google Pay</span>
+                        <img src="https://via.placeholder.com/40x20?text=GPay" alt="GPay" class="provider-logo">
+                    </div>
+                </div>
+            </section>
+
+            <section class="gift-card-section">
+                <h3>Use Gift Card to save on this booking</h3>
+                <div class="gift-card-input">
+                    <div class="checkbox-square"></div>
+                    <span>Gift Card</span>
+                    <span class="gift-icon">🎁</span>
+                </div>
+            </section>
+
+            <button class="pay-button">Pay PHP 41,876.00</button>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <div class="booking-info">
+                <div class="sidebar-header">
+                    <h3>Booking Info</h3>
+                    <a href="#" class="details-link">Details ></a>
+                </div>
+                <h4>Manila ⇌ Tokyo</h4>
+                
+                <div class="flight-leg">
+                    <span class="badge depart">Depart</span> <strong>Mon, May 11</strong> | 🕒 4h 25m
+                    <div class="timeline">
+                        <p>10:05 — Ninoy Aquino International Airport T3</p>
+                        <p>15:30 — Narita International Airport T2</p>
+                    </div>
+                </div>
+
+                <div class="flight-leg">
+                    <span class="badge return">Return</span> <strong>Wed, May 13</strong> | 🕒 4h 40m
+                    <div class="timeline">
+                        <p>01:55 — Haneda Airport T3</p>
+                        <p>05:35 — Ninoy Aquino International Airport T3</p>
+                    </div>
+                </div>
+
+                <div class="price-details">
+                    <p>Price Details</p>
+                    <div class="price-row">
+                        <span>Prepay online</span>
+                        <span>PHP 42,427.00</span>
+                    </div>
+                    <div class="price-row discount">
+                        <span>Payment discount</span>
+                        <span>- PHP 551.00</span>
+                    </div>
+                </div>
+
+                <div class="total-row">
+                    <span>Total</span>
+                    <span class="total-amount">PHP 41,876.00</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

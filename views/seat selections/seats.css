@@ -1,0 +1,117 @@
+:root {
+    --bg-color: #6a7c8e;
+    --card-bg: #2b3d52;
+    --accent-blue: #4a90e2;
+    --text-main: #ffffff;
+    --text-dim: #8ba1b3;
+    --seat-empty: #1e2b3a;
+    --seat-selected: #4ba3e3;
+    --seat-taken: #16212d;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.booking-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.legend {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.first { border: 1px solid var(--accent-blue); }
+.business { background: #3a5b7d; }
+.economy { background: var(--seat-empty); }
+.taken { background: var(--seat-taken); }
+
+/* Seat Grid */
+.seat-map {
+    display: grid;
+    grid-template-columns: 20px repeat(3, 40px) 40px repeat(3, 40px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background: var(--seat-empty);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seat.selected { background: var(--seat-selected); }
+.seat.occupied { background: var(--seat-taken); cursor: not-allowed; opacity: 0.5; }
+
+.label {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+/* Boarding Pass Preview */
+.preview-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+}
+
+.route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.plane-icon { color: var(--accent-blue); }
+
+.continue-btn {
+    margin-top: 20px;
+    padding: 12px 60px;
+    border-radius: 10px;
+    border: none;
+    background: #4ba3e3;
+    color: #1e2b3a;
+    font-weight: bold;
+    cursor: pointer;
+}

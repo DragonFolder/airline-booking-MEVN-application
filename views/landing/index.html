@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Side Project</title>
+  <link rel="stylesheet" type="text/css" href="landing.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-primary bg-light">
+  <div class="container-fluid">
+    <!-- Logo and Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://t3.ftcdn.net/jpg/02/15/51/76/360_F_215517687_MLMCHbyaOb5z8OBffOUw6ASwXDTfjV5v.jpg" 
+           alt="Sprint Airlines Logo" width="100" height="50" class="d-inline-block align-text-top me-2">
+      <span><h4>Sprint Airlines</h4></span>
+    </a>
+
+    <!-- Buttons aligned to the right -->
+    <div class="d-flex">
+      <button class="btn btn-outline-success me-2" type="button"><a href="../register/register.html">Register</a></button>
+      <button class="btn btn-outline-primary me-2" type="button"><a href="../login/login.html">Login</a></button>
+    </div>
+  </div>
+</nav>
+  </nav>
+    <h1>Your Next Adventures Awaits</h1>
+    <h5>Experience the art of effortless travel with<br/>Skybound's premium global network.</h5>
+
+    <div class="container mt-5">
+  <div class="card shadow-sm border-0 bg-light p-4" style="border-radius: 15px;">
+    
+    <!-- Top Row: Trip Type & Economy & Direct Toggle -->
+    <div class="row align-items-center mb-3">
+      <div class="col-md-6">
+        <div class="bg-white p-1 d-inline-flex rounded-3 shadow-sm">
+          <button class="btn btn-white shadow-sm fw-bold px-4">Round Trip</button>
+          <button class="btn btn-light text-muted px-4 border-0">One Way</button>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end align-items-center">
+        <div class="dropdown me-4">
+          <button class="btn btn-link text-dark text-decoration-none dropdown-toggle p-0" type="button">
+            <i class="bi bi-person-wheelchair"></i> Economy
+          </button>
+        </div>
+        <div class="form-check form-switch">
+          <label class="form-check-label small me-2" for="directFlights">Direct Flights</label>
+          <input class="form-check-input" type="checkbox" id="directFlights" checked>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Rows: From and To -->
+    <div class="position-relative mb-3">
+      <!-- Where From -->
+      <div class="card p-3 mb-2 border-0 shadow-sm">
+        <label class="small fw-bold text-muted text-uppercase mb-1">Where From</label>
+        <div class="d-flex align-items-center">
+          <span class="me-2">✈️</span>
+          <input type="text" class="form-control border-0 p-0 shadow-none from-input" placeholder="Departure City">
+        </div>
+      </div>
+
+      <!-- Swap Icon (Absolute Positioned) -->
+      <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 5;">
+        <button class="btn btn-white border shadow-sm rounded-circle p-2 swap-btn" style="width: 40px; height: 40px; transition: transform 0.3s ease;">
+          🔄
+        </button>
+      </div>
+      <!-- Where To -->
+      <div class="card p-3 border-0 shadow-sm">
+        <label class="small fw-bold text-muted text-uppercase mb-1">Where To</label>
+        <div class="d-flex align-items-center">
+          <span class="me-2">🛬</span>
+          <input type="text" class="form-control border-0 p-0 shadow-none to-input" placeholder="Arrival City">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row: Date and Passengers -->
+    <div class="row g-2 mb-4">
+      <div class="col-md-6">
+        <div class="card p-3 border-0 shadow-sm">
+          <label class="small fw-bold text-muted text-uppercase mb-1">Departure</label>
+          <div class="d-flex align-items-center">
+            <span class="me-2">📅</span>
+            <input type="text" class="form-control border-0 p-0 shadow-none departure-input" value="Oct 24, 2024">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3 border-0 shadow-sm">
+          <label class="small fw-bold text-muted text-uppercase mb-1">Passengers</label>
+          <div class="d-flex align-items-center">
+            <span class="me-2">👤</span>
+            <input type="text" class="form-control border-0 p-0 shadow-none passengers-input" value="1 Adult">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Button -->
+    <button class="btn btn-dark w-100 py-3 fw-bold rounded-3 search-btn" style="background-color: #0a1931;">
+      🔍 Search Flights
+    </button>
+ </div>
+
+    <div class="container-fluid p-4">
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"></button>
+    </div>
+
+    <!-- Inner Content -->
+    <div class="carousel-inner">
+      <!-- Japan -->
+      <div class="carousel-item active">
+        <img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/shutterstock601341215huge-1675509836757.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="Japan">
+        <div class="carousel-caption light-text-mode">
+          <h3>Japan</h3>
+          <p>The Land of the Rising Sun.</p>
+        </div>
+      </div>
+
+      <!-- China -->
+      <div class="carousel-item">
+        <img src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2024/11/11_magnificent_Unesco_sites_in_the_Chinese_Mainland-Traditional_Chinese_ancient_town-Eric_Yang-Gettyimages-HERO.renditionimage.1700.850.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="China">
+        <div class="carousel-caption light-text-mode">
+          <h3>China</h3>
+          <p>Ancient traditions and modern wonders.</p>
+        </div>
+      </div>
+
+      <!-- Thailand -->
+      <div class="carousel-item">
+        <img src="https://traveltank.com/blog/wp-content/uploads/2024/09/Top-10-Spots-to-Explore-in-Thailand-in-2024-scaled.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="Thailand">
+        <div class="carousel-caption light-text-mode">
+          <h3>Thailand</h3>
+          <p>Exotic beaches and tropical beauty.</p>
+        </div>
+      </div>
+
+      <!-- Malaysia -->
+      <div class="carousel-item">
+        <img src="https://static1.detourista.com/wp/wp-content/uploads/Unorganized/004-Kek-Lok-Si-Temple-Georgetown-Penang-Malaysia-120322-161446.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="Malaysia">
+        <div class="carousel-caption light-text-mode">
+          <h3>Malaysia</h3>
+          <p>A melting pot of cultures and flavors.</p>
+        </div>
+      </div>
+
+      <!-- Hong Kong -->
+      <div class="carousel-item">
+        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_60/v1755071654/destination/rjgbib6j1mmzviy5gvi1.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="Hong Kong">
+        <div class="carousel-caption light-text-mode">
+          <h3>Hong Kong</h3>
+          <p>Where the skyline meets the sea.</p>
+        </div>
+      </div>
+
+      <!-- Macau -->
+      <div class="carousel-item">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/95/c7/92/casino-at-venetian-macao.jpg?w=500&h=400&s=1" class="d-block w-100 custom-carousel-img lighten-img" alt="Macau">
+        <div class="carousel-caption light-text-mode">
+          <h3>Macau</h3>
+          <p>The Vegas of the East.</p>
+        </div>
+      </div>
+
+      <!-- Vietnam -->
+      <div class="carousel-item">
+        <img src="https://www.imitytravels.com/wp-content/uploads/2024/08/ba-na-hills.webp" class="d-block w-100 custom-carousel-img lighten-img" alt="Vietnam">
+        <div class="carousel-caption light-text-mode">
+          <h3>Vietnam</h3>
+          <p>Timeless charm and natural wonders.</p>
+        </div>
+      </div>
+
+      <!-- India -->
+      <div class="carousel-item">
+        <img src="https://www.holidify.com/images/bgImages/INDIA.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="India">
+        <div class="carousel-caption light-text-mode">
+          <h3>India</h3>
+          <p>Incredible heritage and vibrant life.</p>
+        </div>
+      </div>
+
+      <!-- South Korea -->
+      <div class="carousel-item">
+        <img src="https://www.rappler.com/tachyon/2024/10/south-korea.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="South Korea">
+        <div class="carousel-caption light-text-mode">
+          <h3>South Korea</h3>
+          <p>Dynamic cities and peaceful landscapes.</p>
+        </div>
+      </div>
+      
+      <!-- Extra Slide (To match 10 indicators) -->
+      <div class="carousel-item">
+        <img src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/shutterstock601341215huge-1675509836757.jpg" class="d-block w-100 custom-carousel-img lighten-img" alt="Travel">
+        <div class="carousel-caption light-text-mode">
+          <h5>Adventure</h5>
+          <p>Your journey begins here.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+</div>
+
+<!-- Footer Start -->
+        <footer id="footer" class="bg-light text-dark d-flex flex-column gap-1 justify-content-center align-items-center py-2">
+            <div>Sprint Airlines</div>
+            <div>Side Quest Project</div>
+            <div>&copy;All rights reserved.</div>
+        </footer>      
+<!-- Footer End -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="landing.js"></script>
+</body>
+</html>

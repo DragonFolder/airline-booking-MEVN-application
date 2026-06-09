@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cebu Pacific – Guest Details</title>
+  <link rel="stylesheet" href="details.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__logo">
+      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 14C4 8.477 8.477 4 14 4h8c5.523 0 10 4.477 10 10s-4.477 10-10 10h-8C8.477 24 4 19.523 4 14z" fill="#0099D4"/>
+        <path d="M10 14c0-2.21 1.79-4 4-4h8c2.21 0 4 1.79 4 4s-1.79 4-4 4h-8c-2.21 0-4-1.79-4-4z" fill="#fff"/>
+      </svg>
+      <div class="header__brand">
+        <span class="header__name">cebu pacific</span>
+        <span class="header__tagline">Let's fly every Juan</span>
+      </div>
+    </div>
+    <div class="header__price">
+      PHP 70,525.27 <span class="header__chevron">&#8964;</span>
+    </div>
+  </header>
+
+  <!-- PROGRESS STEPS -->
+  <div class="progress-bar">
+    <div class="step step--done">
+      <div class="step__dot">✓</div>
+      <span>Flights</span>
+    </div>
+    <div class="step__line step__line--done"></div>
+    <div class="step step--done">
+      <div class="step__dot">✓</div>
+      <span>Bundles</span>
+    </div>
+    <div class="step__line step__line--done"></div>
+    <div class="step step--active">
+      <div class="step__dot">3</div>
+      <span>Guest Details</span>
+    </div>
+    <div class="step__line"></div>
+    <div class="step">
+      <div class="step__dot">4</div>
+      <span>Add-ons</span>
+    </div>
+    <div class="step__line"></div>
+    <div class="step">
+      <div class="step__dot">5</div>
+      <span>Payment</span>
+    </div>
+  </div>
+
+  <main class="main">
+    <h1 class="section-heading">Guest Details</h1>
+
+    <div class="layout">
+
+      <!-- LEFT SIDEBAR: PASSENGER TABS -->
+      <aside class="sidebar">
+        <button class="passenger-tab passenger-tab--active" data-passenger="1">Adult 1</button>
+      </aside>
+
+      <!-- MAIN FORM AREA -->
+      <section class="form-area">
+
+        <!-- SELECTED BUNDLES -->
+        <div class="bundles-card">
+          <p class="bundles-card__label">SELECTED BUNDLES FOR THIS GUEST</p>
+          <div class="bundles-card__routes">
+            <div class="bundle-item">
+              <span class="bundle-item__route">MNL-KIX</span>
+              <span class="bundle-item__type">GO Basic ✈</span>
+            </div>
+            <div class="bundle-item">
+              <span class="bundle-item__route">KIX-MNL</span>
+              <span class="bundle-item__type">GO Basic ✈</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider"/>
+
+        <!-- PASSENGER FORM -->
+        <form id="passengerForm" novalidate>
+
+          <!-- NAME -->
+          <fieldset class="form-section">
+            <legend class="form-section__title">Name</legend>
+            <p class="form-section__hint">Please make sure that you enter your name exactly as it is shown on your Valid ID</p>
+            <div class="field-row field-row--name">
+              <div class="field field--title">
+                <label for="title">Title <span class="req">*</span></label>
+                <div class="select-wrapper">
+                  <select id="title" name="title" required>
+                    <option value="">Select</option>
+                    <option value="MR">Mr</option>
+                    <option value="MS">Ms</option>
+                    <option value="MRS">Mrs</option>
+                    <option value="DR">Dr</option>
+                  </select>
+                </div>
+                <span class="error-msg" id="title-error"></span>
+              </div>
+              <div class="field field--firstname">
+                <label for="firstName">First name <span class="req">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required />
+                <span class="error-msg" id="firstName-error"></span>
+              </div>
+              <div class="field field--lastname">
+                <label for="lastName">Last name <span class="req">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required />
+                <span class="error-msg" id="lastName-error"></span>
+              </div>
+            </div>
+            <label class="checkbox-label">
+              <input type="checkbox" id="noFirstName" name="noFirstName" />
+              <span class="checkmark"></span>
+              I have no first name
+              <span class="info-icon" title="Some passports only have a surname">?</span>
+            </label>
+          </fieldset>
+
+          <!-- DATE OF BIRTH -->
+          <fieldset class="form-section">
+            <legend class="form-section__title">Date of Birth</legend>
+            <div class="field-row field-row--dob">
+              <div class="field">
+                <label for="dobDay">Day <span class="req">*</span></label>
+                <input type="number" id="dobDay" name="dobDay" placeholder="DD" min="1" max="31" required />
+                <span class="error-msg" id="dobDay-error"></span>
+              </div>
+              <div class="field">
+                <label for="dobMonth">Month <span class="req">*</span></label>
+                <div class="select-wrapper">
+                  <select id="dobMonth" name="dobMonth" required>
+                    <option value="">Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <span class="error-msg" id="dobMonth-error"></span>
+              </div>
+              <div class="field">
+                <label for="dobYear">Year <span class="req">*</span></label>
+                <input type="number" id="dobYear" name="dobYear" placeholder="YYYY" min="1900" max="2099" required />
+                <span class="error-msg" id="dobYear-error"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- NATIONALITY -->
+          <fieldset class="form-section">
+            <legend class="form-section__title">Nationality <span class="req">*</span></legend>
+            <div class="select-wrapper select-wrapper--full">
+              <select id="nationality" name="nationality" required>
+                <option value="">Select nationality</option>
+                <option value="PH">Filipino</option>
+                <option value="JP">Japanese</option>
+                <option value="US">American</option>
+                <option value="GB">British</option>
+                <option value="AU">Australian</option>
+                <option value="SG">Singaporean</option>
+                <option value="KR">Korean</option>
+                <option value="CN">Chinese</option>
+              </select>
+            </div>
+            <span class="error-msg" id="nationality-error"></span>
+          </fieldset>
+
+          <!-- GO REWARDS -->
+          <fieldset class="form-section">
+            <legend class="form-section__title">Go Rewards Membership ID <span class="optional">(Optional)</span></legend>
+            <input type="text" id="goRewards" name="goRewards" placeholder="e.g. 4041178445" class="input--full" />
+            <div class="info-banner">
+              <span class="info-banner__icon">ℹ</span>
+              <span>To earn points, your Go Rewards account name must match your passenger name.</span>
+            </div>
+          </fieldset>
+
+          <!-- PASSPORT -->
+          <fieldset class="form-section">
+            <legend class="form-section__title">Passport Information <span class="optional">(Optional)</span></legend>
+            <div class="field-row field-row--passport">
+              <div class="field field--grow">
+                <label for="passportNumber">Passport number</label>
+                <input type="text" id="passportNumber" name="passportNumber" placeholder="Enter passport number" />
+              </div>
+              <div class="field field--grow">
+                <label for="countryOfIssue">Country of Issue</label>
+                <div class="select-wrapper">
+                  <select id="countryOfIssue" name="countryOfIssue">
+                    <option value="">Select country</option>
+                    <option value="PH">Philippines</option>
+                    <option value="JP">Japan</option>
+                    <option value="US">United States</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <p class="form-section__subtitle">Expiration date</p>
+            <div class="field-row field-row--dob">
+              <div class="field">
+                <label for="expDay">Day</label>
+                <input type="number" id="expDay" name="expDay" placeholder="DD" min="1" max="31" />
+              </div>
+              <div class="field">
+                <label for="expMonth">Month</label>
+                <div class="select-wrapper">
+                  <select id="expMonth" name="expMonth">
+                    <option value="">Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="expYear">Year</label>
+                <input type="number" id="expYear" name="expYear" placeholder="YYYY" min="2024" max="2099" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- CHECKBOXES -->
+          <fieldset class="form-section form-section--checks">
+            <label class="checkbox-label">
+              <input type="checkbox" id="isOfw" name="isOfw" />
+              <span class="checkmark checkmark--blue"></span>
+              I am an Overseas Filipino Worker (OFW)
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="hasDeclaration" name="hasDeclaration" />
+              <span class="checkmark checkmark--blue"></span>
+              I have a declaration / request
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="isPwd" name="isPwd" />
+              <span class="checkmark checkmark--blue"></span>
+              I am a Person with Disability
+              <span class="info-icon" title="Passengers with disabilities may request special assistance">?</span>
+            </label>
+          </fieldset>
+
+        </form>
+
+        <hr class="divider divider--heavy"/>
+
+        <!-- CONTACT INFORMATION -->
+        <section class="contact-section" id="contactSection">
+          <h2 class="section-heading section-heading--contact">Contact Information</h2>
+          <p class="section-hint">Let us know how we may reach you if there are changes or questions related to your booking and payment. We will also be sending your itinerary to below email.</p>
+
+          <div class="contact-card">
+            <div class="toggle-row">
+              <label class="toggle-switch">
+                <input type="checkbox" id="useGuestDetails" checked />
+                <span class="toggle-track">
+                  <span class="toggle-thumb"></span>
+                </span>
+              </label>
+              <span class="toggle-label">Use guest's details</span>
+            </div>
+
+            <div class="field" id="guestSelectField">
+              <label for="guestSelect">Select a guest</label>
+              <div class="select-wrapper select-wrapper--full">
+                <select id="guestSelect" name="guestSelect">
+                  <option value="adult1">Adult 1</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row field-row--contact">
+              <div class="field field--code">
+                <label for="countryCode">Country code <span class="req">*</span></label>
+                <div class="select-wrapper">
+                  <select id="countryCode" name="countryCode" required>
+                    <option value="+63">(+63)</option>
+                    <option value="+1">(+1)</option>
+                    <option value="+44">(+44)</option>
+                    <option value="+81">(+81)</option>
+                    <option value="+61">(+61)</option>
+                    <option value="+65">(+65)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field field--phone">
+                <label for="mobileNumber">Mobile number <span class="req">*</span>
+                  <span class="info-icon" title="Enter your mobile number without the leading 0">?</span>
+                </label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="9XX 1234567" required />
+                <span class="error-msg" id="mobileNumber-error"></span>
+              </div>
+            </div>
+
+            <div class="field-row field-row--email">
+              <div class="field field--grow">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="sample@email.com" required />
+                <span class="error-msg" id="email-error"></span>
+              </div>
+              <div class="field field--grow">
+                <label for="retypeEmail">Retype email <span class="req">*</span></label>
+                <input type="email" id="retypeEmail" name="retypeEmail" placeholder="sample@email.com" required />
+                <span class="error-msg" id="retypeEmail-error"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRIVACY -->
+          <div class="privacy-card">
+            <label class="checkbox-label">
+              <input type="checkbox" id="privacyConsent" name="privacyConsent" required />
+              <span class="checkmark checkmark--blue"></span>
+              <span>
+                I confirm that I have read, understood, and agree to the updated Cebu Pacific
+                <a href="#" class="link">Privacy Policy</a>.
+                I consent to the collection, use, processing and sharing of my personal information in accordance therewith.
+              </span>
+            </label>
+            <span class="error-msg" id="privacy-error"></span>
+          </div>
+        </section>
+
+        <!-- FORM ACTIONS -->
+        <div class="form-actions">
+          <button type="button" class="btn btn--back" id="backBtn">Back</button>
+          <button type="button" class="btn btn--continue" id="continueBtn">Continue</button>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="details.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  text-align: center;
+  font-family: roboto;
+}
+body{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230418/pngtree-clouds-sky-blue-aesthetic-pastel-image_2403934.jpg") ;
+    background-repeat: no repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+img{
+  mix-blend-mode: darken;
+}
+
+h4{
+  color: #0F2573;
+}
+h1{
+
+  padding: 1rem;
+  margin-top: 3rem !important;
+  font-size: 3.75rem;
+  font-weight: bold;
+  font-size: 3rem !important;
+  line-height: 1.2em;
+  color: #0F2573;
+  align-items: center;
+}
+
+h5{
+  margin:auto;
+  font-size: 3.75rem;
+  font-weight: bold;
+  line-height: 1.2em;
+  color: #0F2573;
+  align-items: center;
+}
+
+/* Fluid container styling */
+.custom-carousel-img {
+  padding: 1rem;
+  margin-top: 3rem !important;
+  height: 70vh; 
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.5s ease;
+
+}
+
+/* LIGHTEN IMAGES: Increases brightness and slightly reduces contrast for a 'soft' look */
+.lighten-img {
+  filter: brightness(1.15) contrast(90%);
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .custom-carousel-img {
+    height: 50vh;
+  }
+}
+
+/* REMOVE OVERLAYS */
+.carousel-item::after {
+  content: none !important;
+}
+
+/* Text readability on bright images */
+.carousel-caption.light-text-mode {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Dark shadow so white text is visible */
+}
+
+/* Darken UI controls so they don't disappear on light images */
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(1) grayscale(100%) brightness(0.5);
+}
+
+.footer{
+  margin: auto !important;
+}

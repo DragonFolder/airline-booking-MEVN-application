@@ -1,0 +1,410 @@
+/* ============================================================
+   Global stylesheet
+   Consolidated from every Vue single-file-component <style> block.
+   Loaded once via src/main.js  ->  import './assets/main.css'
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   Shared hero layout
+   Used by: HomePage, LoginPage, RegisterPage, ErrorPage, PaymentPage
+   (was duplicated in each of those files; deduped here)
+   ------------------------------------------------------------ */
+.hero-container {
+    min-height: 100vh;
+    background: linear-gradient(160deg,
+    #e8f4fd 0%,
+    #c8e6f5 20%,
+    #a8d8f0 40%,
+    #7ec8e3 60%,
+    #b8d9f0 80%,
+    #daeef8 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: black;
+    max-width: 520px;
+    line-height: 1.7;
+}
+
+
+/* ------------------------------------------------------------
+   HomePage
+   ------------------------------------------------------------ */
+.search-card {
+    background: rgba(255, 255, 255, 0.97) !important;
+    border: none !important;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+    padding: 2rem !important;
+}
+
+
+/* ------------------------------------------------------------
+   NavbarComponent
+   ------------------------------------------------------------ */
+.custom-navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364) !important;
+  padding: 0.8rem 1rem;
+}
+
+.brand-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brand-logo:hover {
+  color: #56ccf2 !important;
+}
+
+.btn-flights {
+  color: #ffffff !important;
+  background-color: #56ccf2;
+  border-radius: 20px;
+  padding: 0.3rem 1.2rem !important;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-flights:hover {
+  background-color: #2f80ed;
+  color: #ffffff !important;
+}
+
+.btn-profile {
+  color: #ffffff !important;
+  background-color: #56ccf2;
+  border-radius: 20px;
+  padding: 0.3rem 1.2rem !important;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-profile:hover {
+  background-color: #2f80ed;
+  color: #ffffff !important;
+}
+
+.btn-register {
+  color: #ffffff !important;
+  background-color: #56ccf2;
+  border-radius: 20px;
+  padding: 0.3rem 1.2rem !important;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-register:hover {
+  background-color: #2f80ed;
+  color: #ffffff !important;
+}
+.btn-login {
+  color: #ffffff !important;
+  background-color: #56ccf2;
+  border-radius: 20px;
+  padding: 0.3rem 1.2rem !important;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: #2f80ed;
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+
+/* ------------------------------------------------------------
+   FlightCard
+   ------------------------------------------------------------ */
+.btn-disabled-link {
+  pointer-events: auto;
+}
+
+
+/* ------------------------------------------------------------
+   PaymentPage (checkout layout)
+   ------------------------------------------------------------ */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.status-msg {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 100px;
+}
+@media (min-width: 768px) {
+  .checkout-container { grid-template-columns: 2fr 1fr; }
+  .payment-main { order: 1; }
+  .payment-sidebar { order: 2; }
+}
+@media (max-width: 767px) {
+  .payment-main { order: 2; }
+  .payment-sidebar { order: 1; }
+}
+
+
+/* ------------------------------------------------------------
+   BookingPage
+   ------------------------------------------------------------ */
+.card-footer { padding: .5rem 1rem; }
+
+
+/* ------------------------------------------------------------
+   MyBookingPage
+   ------------------------------------------------------------ */
+.card { border-radius: 6px; }
+
+
+/* ------------------------------------------------------------
+   LogoutPage
+   ------------------------------------------------------------ */
+h3 { margin-top: 1rem; }
+
+
+/* ------------------------------------------------------------
+   PaymentComponent
+   Originally <style scoped>. Qualified under the component root
+   class .payment-form-card so the bare `label`/`input` rules
+   don't restyle every form in the app.
+   ------------------------------------------------------------ */
+.payment-form-card {
+  background: #ffffff;
+  border: 1px solid #e9eef5;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+}
+.payment-form-card .form-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #0f172a;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+/* Section heading as a small uppercase "eyebrow" for clearer structure */
+.payment-form-card .section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 28px 0 18px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eef2f7;
+}
+.payment-form-card .form-group { margin-bottom: 20px; }
+.payment-form-card .form-group.row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+/* display:block so the gap applies even inside the two-up rows, where the
+   label/input are wrapped in a plain div (an inline label ignored margin) */
+.payment-form-card label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 10px;
+}
+.payment-form-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background: #f8fafc;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.payment-form-card input::placeholder { color: #94a3b8; }
+.payment-form-card input:hover { border-color: #94a3b8; }
+.payment-form-card input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+.payment-form-card .uppercase { text-transform: uppercase; }
+.payment-form-card .divider { border: 0; border-top: 1px solid #e2e8f0; margin: 28px 0; }
+.payment-form-card .submit-btn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background 0.2s, transform 0.05s;
+}
+.payment-form-card .submit-btn:hover { background: #1d4ed8; }
+.payment-form-card .submit-btn:active { transform: translateY(1px); }
+.payment-form-card .submit-btn:disabled { background: #93c5fd; cursor: not-allowed; }
+
+
+/* ------------------------------------------------------------
+   PaymentFlightComponent
+   Originally <style scoped>. Qualified under the component root
+   class .flight-summary-card so the `.badge` / `.divider` rules
+   don't collide with Bootstrap badges or the payment form.
+   ------------------------------------------------------------ */
+.flight-summary-card {
+  background: #ffffff;
+  border: 1px solid #e9eef5;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+}
+.flight-summary-card .summary-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+  color: #0f172a;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+/* Each leg shown in its own soft panel to match the form's grouped look */
+.flight-summary-card .flight-segment {
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+}
+.flight-summary-card .segment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+/* Uppercase pill badges, echoing the form's section "eyebrow" labels */
+.flight-summary-card .badge {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.flight-summary-card .badge.arrival {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+.flight-summary-card .city {
+  font-weight: 600;
+  color: #334155;
+}
+.flight-summary-card .segment-details {
+  font-size: 0.9rem;
+  color: #64748b;
+  padding-left: 2px;
+}
+.flight-summary-card .segment-details p {
+  margin-bottom: 2px;
+}
+.flight-summary-card .divider {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 24px 0;
+}
+.flight-summary-card .price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: #64748b;
+}
+.flight-summary-card .price-row.total {
+  align-items: center;
+  gap: 16px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eef2f7;
+}
+/* keep the amount from wrapping or hugging the label */
+.flight-summary-card .price-row .total-amount,
+.flight-summary-card .price-row span:last-child {
+  white-space: nowrap;
+}
+.flight-summary-card .total-amount {
+  color: #2563eb;
+  font-size: 1.35rem;
+}
+
+
+/* ------------------------------------------------------------
+   Contrast / accessibility adjustments
+   ------------------------------------------------------------ */
+
+/* The navbar paints a dark gradient (.custom-navbar), so its links need
+   light text. Bootstrap's default link color is too dark against it. */
+.custom-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus,
+.custom-navbar .nav-link.router-link-active {
+  color: #ffffff !important;
+}
+
+/* Status messages sit on the light hero gradient; the default muted gray /
+   danger red are too faint there, so darken them for readable contrast. */
+.hero-container .text-muted {
+  color: #33475b !important;
+}
+.hero-container .text-danger {
+  color: #9b1c2a !important;
+}
+
+
+/* ------------------------------------------------------------
+   My Booking — collapsible cards (departed flights start collapsed)
+   ------------------------------------------------------------ */
+button.card-header {
+  cursor: pointer;
+  font-weight: 400;
+}
+button.card-header:hover {
+  background-color: rgba(15, 23, 42, 0.03) !important;
+}
+/* Departed bookings are visually muted */
+.departed-booking {
+  background-color: #f8fafc;
+}
+.departed-booking > .card-header {
+  color: #64748b;
+}

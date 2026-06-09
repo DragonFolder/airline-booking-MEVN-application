@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Sprint Airlines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="card" role="main">
+    <img
+      class="logo"
+      src="https://t3.ftcdn.net/jpg/02/15/51/76/360_F_215517687_MLMCHbyaOb5z8OBffOUw6ASwXDTfjV5v.jpg"
+      alt="Sprint Airlines plane logo">
+    <p class="airline-name">Sprint Airlines</p>
+    <div class="divider" aria-hidden="true"></div>
+    <h1>Login</h1>
+    <p class="subtitle">Welcome back — sign in to your account</p>
+    <form action="#" method="post" novalidate>
+      <div class="field">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          name="username"
+          placeholder="Enter your username"
+          autocomplete="username"
+          required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required>
+      </div>
+      <div class="row-meta">
+
+        <label class="remember">
+          <input type="checkbox" name="remember">
+          Remember me
+        </label>
+
+        <a href="#" class="forgot">Forgot password?</a>
+
+      </div>
+
+      <button type="submit" class="btn-login">
+        Sign In
+      </button>
+
+    </form>
+
+    <p class="register">
+      New passenger? <a href="../register/register.html">Create an account</a>
+    </p>
+
+  </div>
+<script src="login.js"></script>
+</body>
+</html>
