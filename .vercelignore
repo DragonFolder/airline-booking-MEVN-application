@@ -1,0 +1,11 @@
+# This repository contains a standalone Express/MongoDB backend in /api that
+# runs separately (e.g. on the EC2 host in the git remote), NOT on Vercel.
+#
+# Vercel automatically turns every file in a root-level /api directory into a
+# Serverless Function. With ~20 files in /api that exceeds the Hobby plan's
+# 12-function limit, so we exclude the backend from the frontend deployment.
+# The Vite app in /src does not import anything from /api, so this is safe.
+api
+
+# Legacy static HTML/CSS/JS mockups — not part of the Vite build.
+views
